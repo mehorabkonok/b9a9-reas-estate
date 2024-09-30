@@ -5,8 +5,19 @@ import { FaGithub } from "react-icons/fa";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useState } from "react";
+import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
+  // statest for dynamic page title
+  const [pageTitle, setPageTitle] = useState("");
+
+  // after the page mounts, the useEffect will be triggered
+  useEffect(() => {
+    setPageTitle("Login");
+  }, []);
+
   const { signInUser, signInUsingGoogle, signInUsingGitHub } =
     useContext(userContext);
 
@@ -57,6 +68,12 @@ const Login = () => {
 
   return (
     <div className="hero bg-base-200 min-h-screen">
+      {/* dynamic page title */}
+      <Helmet>
+        <title>{pageTitle} | MyApp</title>
+        <meta name="description" content="Login to access all the features" />
+      </Helmet>
+
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center lg:text-left">
           <h1 className="text-5xl font-bold">Login now!</h1>

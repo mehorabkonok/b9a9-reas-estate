@@ -1,14 +1,28 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { userContext } from "../../AuthProvider/AuthContext";
+
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
+
 import { updateProfile } from "firebase/auth";
 import auth from "../../Firebase/firebase.config";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Helmet } from "react-helmet";
+import { useEffect } from "react";
 
 const Register = () => {
+  // statest for dynamic page title
+  const [pageTitle, setPageTitle] = useState("");
+
+  // after the page mounts, the useEffect will be triggered
+  useEffect(() => {
+    setPageTitle("Register");
+  }, []);
+
   const { createNewUser, signInUsingGoogle, signInUsingGitHub, signOutUser } =
     useContext(userContext);
 
@@ -51,6 +65,23 @@ const Register = () => {
       });
   };
 
+  // password toggling states
+  const [visibility, setVisibility] = useState(false);
+
+  // toggle password visibility
+  const handlePasswordVisibility = (e) => {
+    e.preventDefault();
+    const passwordField = document.getElementById("password");
+
+    if (passwordField.type === "password") {
+      passwordField.type = "text";
+      setVisibility(true);
+    } else {
+      passwordField.type = "password";
+      setVisibility(false);
+    }
+  };
+
   const handleGoogleSignIn = () => {
     signInUsingGoogle()
       .then((userCredential) => {
@@ -79,6 +110,15 @@ const Register = () => {
 
   return (
     <div className="hero bg-base-200 min-h-screen">
+      {/* dynamic title goes here using helmate */}
+      <Helmet>
+        <title>{pageTitle} | MyApp</title> {/* Dynamic title */}
+        <meta
+          name="description"
+          content="Register now to access all the features"
+        />
+      </Helmet>
+
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center lg:text-left">
           <h1 className="text-5xl font-bold">Register now!</h1>
@@ -137,6 +177,7 @@ const Register = () => {
                 <span className="label-text">Password</span>
               </label>
               <input
+                id="password"
                 type="password"
                 name="password"
                 pattern="(?=.*[a-z])(?=.*[A-Z]).{8,}"
@@ -144,6 +185,24 @@ const Register = () => {
                 className="input input-bordered"
                 required
               />
+              <div className="">
+                <button
+                  onClick={handlePasswordVisibility}
+                  className="border flex items-center gap-2 mt-2 px-2 rounded-md"
+                >
+                  {visibility ? (
+                    <>
+                      {" "}
+                      <FaEyeSlash /> <p>Hide password</p>
+                    </>
+                  ) : (
+                    <>
+                      {" "}
+                      <FaEye /> <p>Show password</p>
+                    </>
+                  )}
+                </button>
+              </div>
             </div>
             <div className="form-control mt-6">
               <button className="btn btn-primary">Register</button>

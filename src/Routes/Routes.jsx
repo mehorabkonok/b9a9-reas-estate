@@ -4,6 +4,8 @@ import Home from "../Components/Home/Home";
 import NotFound from "../Components/NotFound/NotFound";
 import Register from "../Components/Register/Register";
 import Login from "../Components/Login/Login";
+import Update_profile from "../Components/Update_profile/Update_profile";
+import User_profile from "../Components/User_profile/User_profile";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,14 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/update_profile",
+        element: <Update_profile></Update_profile>,
+      },
+      {
+        path: "/user_profile",
+        element: <User_profile></User_profile>,
       },
       {
         path: "*",
