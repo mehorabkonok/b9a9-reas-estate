@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { userContext } from "../../AuthProvider/AuthContext";
+import "./navstyles.css";
 
 const Navbar = () => {
   const navList = (
@@ -39,7 +40,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-sky-500 text-white rounded-lg">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -60,12 +61,12 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-success text-white rounded-box z-[2] mt-3 w-52 p-2 shadow"
           >
             {navList}
           </ul>
         </div>
-        <div className="border-2 border-base-500 rounded-md p-2 h-10 w-10 flex items-center justify-center">
+        <div className="border-2 border-base-500 rounded-full p-2 h-10 w-10 flex items-center justify-center">
           <Link to="/" className="text-xl ">
             RE
           </Link>

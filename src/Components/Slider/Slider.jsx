@@ -36,33 +36,33 @@ const Slider = () => {
         modules={[Autoplay, EffectFade, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide className="text-center text-lg bg-white flex justify-center items-center">
+        <SwiperSlide className="text-center text-lg bg-white flex justify-center items-center px-2 py-1">
           <img
-            className="block w-full h-full object-cover"
+            className="block w-full h-full rounded-b-lg object-cover"
             src={apartment_one}
           />
         </SwiperSlide>
-        <SwiperSlide className="text-center text-lg bg-white flex justify-center items-center">
+        <SwiperSlide className="text-center text-lg bg-white flex justify-center items-center px-2 py-1">
           <img
-            className="block w-full h-full object-cover"
+            className="block w-full h-full rounded-b-lg object-cover"
             src={apartment_two}
           />
         </SwiperSlide>
-        <SwiperSlide className="text-center text-lg bg-white flex justify-center items-center">
+        <SwiperSlide className="text-center text-lg bg-white flex justify-center items-center px-2 py-1">
           <img
-            className="block w-full h-full object-cover"
+            className="block w-full h-full rounded-b-lg object-cover"
             src={apartment_three}
           />
         </SwiperSlide>
-        <SwiperSlide className="text-center text-lg bg-white flex justify-center items-center">
+        <SwiperSlide className="text-center text-lg bg-white flex justify-center items-center px-2 py-1">
           <img
-            className="block w-full h-full object-cover"
+            className="block w-full h-full rounded-b-lg object-cover"
             src={apartment_four}
           />
         </SwiperSlide>
-        <SwiperSlide className="text-center text-lg bg-white flex justify-center items-center">
+        <SwiperSlide className="text-center text-lg bg-white flex justify-center items-center px-2 py-1">
           <img
-            className="block w-full h-full object-cover"
+            className="block w-full h-full rounded-b-lg object-cover"
             src={apartment_five}
           />
         </SwiperSlide>
