@@ -3,12 +3,14 @@ import { createContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import {
   createUserWithEmailAndPassword,
+  deleteUser,
   GithubAuthProvider,
   GoogleAuthProvider,
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 import auth from "../Firebase/firebase.config";
 
@@ -46,7 +48,7 @@ const AuthContext = ({ children }) => {
       if (currentUser) {
         setUserData(currentUser);
       } else {
-        setUserData("No User available");
+        setUserData(null);
       }
     });
     return () => {
@@ -55,11 +57,25 @@ const AuthContext = ({ children }) => {
   }, []);
 
   // getting user from auth
-  // console.log(auth.currentUser);
+  console.log(auth.currentUser);
+
+  // update user profile
+  const updateUserData = (userName, userPhotoUrl) => {
+    return updateProfile(auth.currentUser, {
+      displayName: userName,
+
+      photoURL: userPhotoUrl,
+    });
+  };
 
   // sign out an existing user
   const signOutUser = () => {
     return signOut(auth);
+  };
+
+  // delete a user profile
+  const deleteUserAcount = () => {
+    return deleteUser(auth.currentUser);
   };
 
   const userContext_data = {
@@ -68,7 +84,9 @@ const AuthContext = ({ children }) => {
     signInUsingGoogle,
     signInUsingGitHub,
     userData,
+    updateUserData,
     signOutUser,
+    deleteUserAcount,
   };
 
   return (

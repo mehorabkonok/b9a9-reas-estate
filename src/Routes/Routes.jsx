@@ -32,6 +32,7 @@ const router = createBrowserRouter([
       {
         path: "/user_profile",
         element: <User_profile></User_profile>,
+        loader: () => fetch("/estate.json"),
       },
       {
         path: "/estate_details/:expected_id",

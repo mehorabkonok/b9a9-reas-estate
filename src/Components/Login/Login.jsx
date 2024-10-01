@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { userContext } from "../../AuthProvider/AuthContext";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -33,6 +35,7 @@ const Login = () => {
     signInUser(user_email, user_password)
       .then((userCredential) => {
         console.log(userCredential);
+        console.log(userCredential.user);
         console.log("User logged in successfully");
         toast.success("Successfully Logged in!");
       })
@@ -40,6 +43,23 @@ const Login = () => {
         console.log(error);
         toast.error("Sorry, some error occured while Logging In!");
       });
+  };
+
+  // password toggling states
+  const [visibility, setVisibility] = useState(false);
+
+  // toggle password visibility
+  const handlePasswordVisibility = (e) => {
+    e.preventDefault();
+    const passwordField = document.getElementById("password");
+
+    if (passwordField.type === "password") {
+      passwordField.type = "text";
+      setVisibility(true);
+    } else {
+      passwordField.type = "password";
+      setVisibility(false);
+    }
   };
 
   const handleGoogleSignIn = () => {
@@ -113,17 +133,31 @@ const Login = () => {
                 <span className="label-text">Password</span>
               </label>
               <input
+                id="password"
                 type="password"
                 name="password"
                 placeholder="password"
                 className="input input-bordered"
                 required
               />
-              <label className="label">
-                <a href="#" className="label-text-alt link link-hover">
-                  Forgot password?
-                </a>
-              </label>
+            </div>
+            <div className="">
+              <button
+                onClick={handlePasswordVisibility}
+                className="border flex items-center gap-2 mt-2 px-2 rounded-md"
+              >
+                {visibility ? (
+                  <>
+                    {" "}
+                    <FaEyeSlash /> <p>Hide password</p>
+                  </>
+                ) : (
+                  <>
+                    {" "}
+                    <FaEye /> <p>Show password</p>
+                  </>
+                )}
+              </button>
             </div>
             <div className="form-control mt-6">
               <button className="btn btn-primary">Login</button>
