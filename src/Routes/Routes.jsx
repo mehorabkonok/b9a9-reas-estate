@@ -7,6 +7,8 @@ import Login from "../Components/Login/Login";
 import Update_profile from "../Components/Update_profile/Update_profile";
 import User_profile from "../Components/User_profile/User_profile";
 import Estate_details from "../Components/Estates/Estates_details/Estate_details";
+import PrivateRout from "../Components/Private/PrivateRout";
+import Extra from "../Components/Extra/Extra";
 
 const router = createBrowserRouter([
   {
@@ -27,17 +29,32 @@ const router = createBrowserRouter([
       },
       {
         path: "/update_profile",
-        element: <Update_profile></Update_profile>,
+        element: (
+          <PrivateRout>
+            <Update_profile></Update_profile>
+          </PrivateRout>
+        ),
       },
       {
         path: "/user_profile",
-        element: <User_profile></User_profile>,
-        loader: () => fetch("/estate.json"),
+        element: (
+          <PrivateRout>
+            <User_profile></User_profile>
+          </PrivateRout>
+        ),
       },
       {
         path: "/estate_details/:expected_id",
-        element: <Estate_details></Estate_details>,
+        element: (
+          <PrivateRout>
+            <Estate_details></Estate_details>
+          </PrivateRout>
+        ),
         loader: () => fetch("/estate.json"),
+      },
+      {
+        path: "/extra",
+        element: <Extra></Extra>,
       },
       {
         path: "*",

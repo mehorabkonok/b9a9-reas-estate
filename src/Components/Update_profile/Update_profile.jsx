@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { userContext } from "../../AuthProvider/AuthContext";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Update_profile = () => {
   // statest for dynamic page title
@@ -29,7 +31,9 @@ const Update_profile = () => {
       .then(() => {
         console.log("Profile updated successfully");
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   // delete acount
@@ -37,9 +41,12 @@ const Update_profile = () => {
     deleteUserAcount()
       .then(() => {
         console.log("User deleted successfully");
+        toast.success("Deleted successfully!");
       })
       .catch((error) => {
-        console.log(error);
+        console.log("Error deleting acount:", error);
+        // <Navigate to="/login" state={location.pathname}></Navigate>;
+        toast.info("Please log in again and try to delete!");
       });
   };
 
@@ -50,6 +57,19 @@ const Update_profile = () => {
         <title>{pageTitle} | MyApp</title>
         <meta name="description" content="Update the user profile" />
       </Helmet>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition:Bounce
+      />
 
       <div>
         <div className="hero bg-sky-100 min-h-screen">
@@ -133,8 +153,9 @@ const Update_profile = () => {
                   <button className="btn btn-primary">Update Profile</button>
                 </div>
               </form>
-              <div className="text-center px-8 py-2 mb-4">
+              <div className="text-center px-8 py-2 pb-6 border-t-2 border-red-500 bg-red-100">
                 <div className="flex flex-col gap-2">
+                  <p className=" text-xl font-bold text-red-500">Danger Zone</p>
                   <button
                     onClick={handleAcountDetele}
                     className="btn bg-red-500 text-white"

@@ -10,6 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Login = () => {
   // statest for dynamic page title
@@ -19,6 +20,13 @@ const Login = () => {
   useEffect(() => {
     setPageTitle("Login");
   }, []);
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  console.log(location.pathname);
+  console.log(location.state);
+  console.log(navigate);
 
   const { signInUser, signInUsingGoogle, signInUsingGitHub } =
     useContext(userContext);
@@ -38,6 +46,9 @@ const Login = () => {
         console.log(userCredential.user);
         console.log("User logged in successfully");
         toast.success("Successfully Logged in!");
+
+        // navigate after login
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.log(error);
