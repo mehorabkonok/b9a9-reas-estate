@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { userContext } from "../../AuthProvider/AuthContext";
 import "./navstyles.css";
+import logo from "../../assets/real_estate_logo.png";
 
 const Navbar = () => {
   const navList = (
@@ -69,9 +70,9 @@ const Navbar = () => {
               {navList}
             </ul>
           </div>
-          <div className="border-2 border-base-500 rounded-full p-2 h-10 w-10 flex items-center justify-center">
+          <div className="border-2 border-base-500 rounded-full h-10 w-10 flex items-center justify-center">
             <Link to="/" className="text-xl ">
-              RE
+              <img className="rounded-full" src={logo} alt="" />
             </Link>
           </div>
         </div>
