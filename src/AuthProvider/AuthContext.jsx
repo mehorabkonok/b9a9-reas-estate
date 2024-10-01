@@ -42,7 +42,7 @@ const AuthContext = ({ children }) => {
   // get user data using onAuthStateChange
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      console.log("User in the auth state changed: ", currentUser);
+      // console.log("User in the auth state changed: ", currentUser);
       if (currentUser) {
         setUserData(currentUser);
       } else {
@@ -55,7 +55,7 @@ const AuthContext = ({ children }) => {
   }, []);
 
   // getting user from auth
-  console.log(auth.currentUser);
+  // console.log(auth.currentUser);
 
   // sign out an existing user
   const signOutUser = () => {

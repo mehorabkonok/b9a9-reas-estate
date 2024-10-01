@@ -109,7 +109,7 @@ const Register = () => {
   };
 
   return (
-    <div className="hero bg-base-200 min-h-screen">
+    <div className="hero bg-sky-100 min-h-screen">
       {/* dynamic title goes here using helmate */}
       <Helmet>
         <title>{pageTitle} | MyApp</title> {/* Dynamic title */}

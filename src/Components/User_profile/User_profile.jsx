@@ -12,7 +12,7 @@ const User_profile = () => {
   }, []);
 
   return (
-    <div>
+    <div className="bg-sky-100">
       {/* dynamic title */}
       <Helmet>
         <title>{pageTitle} | MyApp</title>

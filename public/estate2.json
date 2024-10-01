@@ -8,8 +8,6 @@
     "status": "sell",
     "area_sqft": 1500,
     "location": "Downtown, City Center",
-    "lat": 40.7128,
-    "lng": -74.006,
     "thumbnail_image": "https://i.ibb.co.com/Y80zL5x/1.webp",
     "interior_images": [
       "https://i.ibb.co.com/Y80zL5x/1.webp",
@@ -28,8 +26,6 @@
     "status": "sell",
     "area_sqft": 1800,
     "location": "Suburbs, South City",
-    "lat": 37.7749,
-    "lng": -122.4194,
     "thumbnail_image": "https://i.ibb.co.com/9Ng53Df/1.webp",
     "interior_images": [
       "https://i.ibb.co.com/9Ng53Df/1.webp",
@@ -48,8 +44,6 @@
     "status": "sell",
     "area_sqft": 1200,
     "location": "East Hills, City View",
-    "lat": 34.0522,
-    "lng": -118.2437,
     "thumbnail_image": "https://i.ibb.co.com/ZLYHxgR/1.webp",
     "interior_images": [
       "https://i.ibb.co.com/ZLYHxgR/1.webp",
@@ -68,8 +62,6 @@
     "status": "sell",
     "area_sqft": 1600,
     "location": "West End, City Center",
-    "lat": 51.5074,
-    "lng": -0.1278,
     "thumbnail_image": "https://i.ibb.co.com/P6G11wG/1.webp",
     "interior_images": [
       "https://i.ibb.co.com/P6G11wG/1.webp",
@@ -88,8 +80,6 @@
     "status": "sell",
     "area_sqft": 2000,
     "location": "Oceanfront, Beachside",
-    "lat": 36.7783,
-    "lng": -119.4179,
     "thumbnail_image": "https://i.ibb.co.com/L1nH2kB/1.webp",
     "interior_images": [
       "https://i.ibb.co.com/L1nH2kB/1.webp",
@@ -108,8 +98,6 @@
     "status": "rent",
     "area_sqft": 1100,
     "location": "Midtown, City Center",
-    "lat": 40.7306,
-    "lng": -73.9352,
     "thumbnail_image": "https://i.ibb.co.com/Q9y0XPk/1.webp",
     "interior_images": [
       "https://i.ibb.co.com/Q9y0XPk/1.webp",
@@ -128,8 +116,6 @@
     "status": "rent",
     "area_sqft": 950,
     "location": "Greenfield, North Side",
-    "lat": 34.0522,
-    "lng": -118.2437,
     "thumbnail_image": "https://i.ibb.co.com/0qgshNX/1.webp",
     "interior_images": [
       "https://i.ibb.co.com/0qgshNX/1.webp",
@@ -148,8 +134,6 @@
     "status": "sell",
     "area_sqft": 2500,
     "location": "Central Park, Downtown",
-    "lat": 40.7851,
-    "lng": -73.9683,
     "thumbnail_image": "https://i.ibb.co.com/1rQGSnK/1.webp",
     "interior_images": [
       "https://i.ibb.co.com/1rQGSnK/1.webp",
@@ -168,15 +152,13 @@
     "status": "rent",
     "area_sqft": 1300,
     "location": "Westside, Suburbs",
-    "lat": 34.0522,
-    "lng": -118.2437,
     "thumbnail_image": "https://i.ibb.co.com/XJtWBzQ/1.webp",
     "interior_images": [
       "https://i.ibb.co.com/XJtWBzQ/1.webp",
-      "https://i.ibb.co.com/Y0g5TzP/2.webp",
-      "https://i.ibb.co.com/Nj71x3V/3.webp",
-      "https://i.ibb.co.com/tVrKfkF/4.webp",
-      "https://i.ibb.co.com/HX6yYcd/5.webp"
+      "https://i.ibb.co.com/V0yr1C5/2.webp",
+      "https://i.ibb.co.com/bJh81bs/3.webp",
+      "https://i.ibb.co.com/pjWQp6Q/4.webp",
+      "https://i.ibb.co.com/92g0Msf/5.webp"
     ]
   },
   {
@@ -188,8 +170,6 @@
     "status": "rent",
     "area_sqft": 800,
     "location": "City Center, Downtown",
-    "lat": 40.7484,
-    "lng": -73.9857,
     "thumbnail_image": "https://i.ibb.co.com/zGXPnMb/1.webp",
     "interior_images": [
       "https://i.ibb.co.com/zGXPnMb/1.webp",

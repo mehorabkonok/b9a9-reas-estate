@@ -11,7 +11,7 @@ const Update_profile = () => {
     setPageTitle("Update Profile");
   }, []);
   return (
-    <div>
+    <div className="bg-sky-100">
       {/* dynamic title */}
       <Helmet>
         <title>{pageTitle} | MyApp</title>

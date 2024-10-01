@@ -26,10 +26,10 @@ const Navbar = () => {
 
   const { userData, signOutUser } = useContext(userContext);
 
-  console.log("User data from nav:", userData);
-  if (userData) {
-    console.log("User data from nav:", userData.displayName);
-  }
+  // console.log("User data from nav:", userData);
+  // if (userData) {
+  //   console.log("User data from nav:", userData.displayName);
+  // }
 
   const handleSignOut = () => {
     signOutUser()
@@ -40,7 +40,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-sky-500 text-white rounded-lg">
+    <div className="navbar bg-sky-500 text-white rounded-t-lg">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

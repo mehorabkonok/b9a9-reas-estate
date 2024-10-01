@@ -67,7 +67,7 @@ const Login = () => {
   };
 
   return (
-    <div className="hero bg-base-200 min-h-screen">
+    <div className="hero bg-sky-100 min-h-screen">
       {/* dynamic page title */}
       <Helmet>
         <title>{pageTitle} | MyApp</title>
