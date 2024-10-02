@@ -54,7 +54,7 @@ const Update_profile = () => {
     <div className="bg-sky-100">
       {/* dynamic title */}
       <Helmet>
-        <title>{pageTitle} | MyApp</title>
+        <title>RE Real Estate | {pageTitle}</title>
         <meta name="description" content="Update the user profile" />
       </Helmet>
       <ToastContainer

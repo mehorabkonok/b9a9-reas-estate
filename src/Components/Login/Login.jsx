@@ -78,6 +78,7 @@ const Login = () => {
       .then((userCredential) => {
         console.log(userCredential);
         toast.success("Successfully signed in using Google!");
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.log(error);
@@ -90,6 +91,7 @@ const Login = () => {
       .then((userCredential) => {
         console.log(userCredential);
         toast.success("Successfully signed in using GitHub!");
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.log(error);
@@ -101,7 +103,7 @@ const Login = () => {
     <div className="hero bg-sky-100 min-h-screen">
       {/* dynamic page title */}
       <Helmet>
-        <title>{pageTitle} | MyApp</title>
+        <title>RE Real Estate | {pageTitle}</title>
         <meta name="description" content="Login to access all the features" />
       </Helmet>
 

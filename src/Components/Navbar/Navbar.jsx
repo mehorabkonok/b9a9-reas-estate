@@ -1,8 +1,7 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { userContext } from "../../AuthProvider/AuthContext";
 import "./navstyles.css";
-import logo from "../../assets/real_estate_logo.png";
 
 const Navbar = () => {
   const navList = (
@@ -42,6 +41,9 @@ const Navbar = () => {
       });
   };
 
+  // tooltip functionality
+  const [showTooltip, setShowToolTip] = useState(false);
+
   return (
     <>
       <div className="navbar bg-sky-500 text-white rounded-t-lg">
@@ -70,9 +72,9 @@ const Navbar = () => {
               {navList}
             </ul>
           </div>
-          <div className="border-2 border-base-500 rounded-full h-10 w-10 flex items-center justify-center">
+          <div className="border-2 border-base-500 rounded-lg p-1 md:p-2 md:h-10 w-auto flex items-center justify-center">
             <Link to="/" className="text-xl ">
-              <img className="rounded-full" src={logo} alt="" />
+              <p className="text-base md:text-xl font-normal">RE Real Estate</p>
             </Link>
           </div>
         </div>
@@ -81,16 +83,25 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end gap-2">
-          {userData && (
+          {userData ? (
             <div className="flex items-center gap-2">
               <div className="flex">
                 {userData.photoURL ? (
-                  <div>
+                  <div
+                    className="relative"
+                    onMouseEnter={() => setShowToolTip(true)}
+                    onMouseLeave={() => setShowToolTip(false)}
+                  >
                     <img
-                      className="w-12 h-12 rounded-full"
+                      className="w-9 h-9 md:w-12 md:h-12 border-2 border-white rounded-full"
                       src={userData.photoURL}
                       alt="profile picture"
                     />
+                    {showTooltip && (
+                      <div className="absolute top-6 bg-sky-500 right-11 w-auto text-nowrap z-[2] drop-shadow-lg text-white text-sm md:text-base px-1 md:px-4 py-1 md:py-4 rounded">
+                        {userData.displayName || "No Name Provided"}
+                      </div>
+                    )}
                   </div>
                 ) : (
                   <div className="flex items-center px-2 ">
@@ -98,9 +109,21 @@ const Navbar = () => {
                   </div>
                 )}
               </div>
-              <button onClick={handleSignOut} className="btn">
-                Sign Out
+              <button
+                onClick={handleSignOut}
+                className="btn btn-outline hover:bg-white hover:text-sky-500 hover:border-sky-500 bg-sky-500 text-white border-2 border-white"
+              >
+                Log Out
               </button>
+            </div>
+          ) : (
+            <div>
+              <Link
+                to="/login"
+                className="btn btn-outline hover:bg-white hover:text-sky-500 hover:border-sky-500 bg-sky-500 text-white border-2 border-white"
+              >
+                Login
+              </Link>
             </div>
           )}
         </div>

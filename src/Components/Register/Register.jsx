@@ -112,7 +112,7 @@ const Register = () => {
     <div className="hero bg-sky-100 min-h-screen">
       {/* dynamic title goes here using helmate */}
       <Helmet>
-        <title>{pageTitle} | MyApp</title> {/* Dynamic title */}
+        <title>RE Real Estate | {pageTitle}</title> {/* Dynamic title */}
         <meta
           name="description"
           content="Register now to access all the features"

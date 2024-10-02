@@ -17,7 +17,8 @@
       "https://i.ibb.co.com/MC8Yq8g/3.webp",
       "https://i.ibb.co.com/28DSM3z/4.webp",
       "https://i.ibb.co.com/HCf0qD7/5.webp"
-    ]
+    ],
+    "facilities": ["Living Room", "Swimming Pool", "Kitchen"]
   },
   {
     "id": 2,
@@ -37,7 +38,8 @@
       "https://i.ibb.co.com/Hdt27Zd/3.webp",
       "https://i.ibb.co.com/JqT5y3S/4.webp",
       "https://i.ibb.co.com/CJ528c2/5.webp"
-    ]
+    ],
+    "facilities": ["Living Room", "Kitchen", "Gym"]
   },
   {
     "id": 3,
@@ -57,7 +59,8 @@
       "https://i.ibb.co.com/Vw780VR/3.webp",
       "https://i.ibb.co.com/ph6Qg7K/4.webp",
       "https://i.ibb.co.com/df9g2RH/5.webp"
-    ]
+    ],
+    "facilities": ["Living Room", "Swimming Pool", "Kitchen", "Playground"]
   },
   {
     "id": 4,
@@ -77,7 +80,8 @@
       "https://i.ibb.co.com/PxMYXMB/3.webp",
       "https://i.ibb.co.com/vxN10hk/4.webp",
       "https://i.ibb.co.com/k66JJJW/5.webp"
-    ]
+    ],
+    "facilities": ["Living Room", "Kitchen", "Garage", "Balcony"]
   },
   {
     "id": 5,
@@ -97,7 +101,8 @@
       "https://i.ibb.co.com/BV8K36v/3.webp",
       "https://i.ibb.co.com/p38wj8p/4.webp",
       "https://i.ibb.co.com/w628025/5.webp"
-    ]
+    ],
+    "facilities": ["Living Room", "Swimming Pool", "Kitchen", "Gym"]
   },
   {
     "id": 6,
@@ -117,7 +122,8 @@
       "https://i.ibb.co.com/Sdg925G/3.webp",
       "https://i.ibb.co.com/tPnV7qv/4.webp",
       "https://i.ibb.co.com/yP771Tc/5.webp"
-    ]
+    ],
+    "facilities": ["Living Room", "Kitchen", "Home Office"]
   },
   {
     "id": 7,
@@ -137,7 +143,8 @@
       "https://i.ibb.co.com/r41yC7w/3.webp",
       "https://i.ibb.co.com/xMdB2CB/4.webp",
       "https://i.ibb.co.com/t2DGyg2/5.webp"
-    ]
+    ],
+    "facilities": ["Living Room", "Kitchen", "BBQ Area", "Garden"]
   },
   {
     "id": 8,
@@ -157,7 +164,8 @@
       "https://i.ibb.co.com/N65WdXC/3.webp",
       "https://i.ibb.co.com/18rm191/4.webp",
       "https://i.ibb.co.com/6mv2ScN/5.webp"
-    ]
+    ],
+    "facilities": ["Living Room", "Swimming Pool", "Kitchen", "Sauna"]
   },
   {
     "id": 9,
@@ -177,7 +185,8 @@
       "https://i.ibb.co.com/Nj71x3V/3.webp",
       "https://i.ibb.co.com/tVrKfkF/4.webp",
       "https://i.ibb.co.com/HX6yYcd/5.webp"
-    ]
+    ],
+    "facilities": ["Living Room", "Kitchen", "Gym", "Garden"]
   },
   {
     "id": 10,
@@ -197,6 +206,7 @@
       "https://i.ibb.co.com/sPwgbs0/3.webp",
       "https://i.ibb.co.com/Kq5DYkt/4.webp",
       "https://i.ibb.co.com/s1QzXPv/5.webp"
-    ]
+    ],
+    "facilities": ["Living Room", "Kitchen", "Private Theater", "Garage"]
   }
 ]

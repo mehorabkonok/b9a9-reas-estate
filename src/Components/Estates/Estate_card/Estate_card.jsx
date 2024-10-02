@@ -71,7 +71,7 @@ const Estate_card = ({ estate }) => {
                 to={`/estate_details/${id}`}
                 className="btn btn-info text-white w-full"
               >
-                Show Details
+                View Property
               </Link>
             </div>
           </div>

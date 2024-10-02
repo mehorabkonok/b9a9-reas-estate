@@ -16,7 +16,7 @@ const Home = () => {
     <div>
       {/* dynamic title goes here using helmate */}
       <Helmet>
-        <title>{pageTitle} | MyApp</title> {/* Dynamic title */}
+        <title>RE Real Estate | {pageTitle}</title> {/* Dynamic title */}
         <meta name="description" content="Home page for the main content" />
       </Helmet>
 

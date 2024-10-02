@@ -40,9 +40,11 @@ const Estate_card = () => {
     status,
     area_sqft,
     location,
-
     interior_images,
+    facilities,
   } = estate;
+
+  console.log(facilities);
 
   const pagination = {
     clickable: true,
@@ -91,9 +93,17 @@ const Estate_card = () => {
             </div>
             <h2 className="h-20 2xl:h-24 p-2">{estate_title}</h2>
           </div>
-          <div className="border h-auto flex flex-col items-center md:flex-row">
-            <div className="h-full w-full md:w-1/2 px-10 py-4">
-              <p> {description} </p>
+          <div className="border pl-4 h-auto flex flex-col items-center md:flex-row">
+            <div className="h-full w-full md:w-1/2  py-4">
+              <p className="font-bold"> {description} </p>
+              <div className="mt-2">
+                <h2>Facilities</h2>
+                <ul className="list-decimal px-6 py-2">
+                  {facilities.map((facility, index) => (
+                    <li key={index}>{facility}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
             <div
               id="leaflet_container_div"
