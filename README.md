@@ -28,17 +28,6 @@ Key Rules:
 video you will see this point is on additional information but remember it
 is mandatory to implement)
 
-6.  Estate Details: When the user clicks the “View Property” button it takes
-    the user to the Estate Details page. This page will be a protected route
-    and ensure that the private route moves to the login page if the user is
-    not logged in.
-    ○ Banner: you need to show detailed information about the selected
-    estate.
-    💡The user shouldn't be redirected to the login page after you reload a page of
-    the private route.
-
-    Challenges Requirements:
-
     Additional Information:
 
     ● Deploy your website on Firebase.

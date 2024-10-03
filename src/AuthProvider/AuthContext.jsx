@@ -14,30 +14,35 @@ import {
 } from "firebase/auth";
 import auth from "../Firebase/firebase.config";
 
-export const userContext = createContext([]);
+export const userContext = createContext(null);
 
 const AuthContext = ({ children }) => {
   const [userData, setUserData] = useState();
+  const [loading, setLoading] = useState(true);
 
   // create new user using email and password
   const createNewUser = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   // Authenticate using google
   const googleProvider = new GoogleAuthProvider();
   const signInUsingGoogle = () => {
+    setLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
 
   // Authenticate using github
   const githubProvier = new GithubAuthProvider();
   const signInUsingGitHub = () => {
+    setLoading(true);
     return signInWithPopup(auth, githubProvier);
   };
 
   //   sign in existing user using email and password
   const signInUser = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
@@ -45,11 +50,8 @@ const AuthContext = ({ children }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       // console.log("User in the auth state changed: ", currentUser);
-      if (currentUser) {
-        setUserData(currentUser);
-      } else {
-        setUserData(null);
-      }
+      setLoading(false);
+      setUserData(currentUser);
     });
     return () => {
       unsubscribe();
@@ -61,6 +63,7 @@ const AuthContext = ({ children }) => {
 
   // update user profile
   const updateUserData = (userName, userPhotoUrl) => {
+    setLoading(true);
     return updateProfile(auth.currentUser, {
       displayName: userName,
 
@@ -70,15 +73,18 @@ const AuthContext = ({ children }) => {
 
   // sign out an existing user
   const signOutUser = () => {
+    setLoading(true);
     return signOut(auth);
   };
 
   // delete a user profile
   const deleteUserAcount = () => {
+    setLoading(true);
     return deleteUser(auth.currentUser);
   };
 
   const userContext_data = {
+    loading,
     createNewUser,
     signInUser,
     signInUsingGoogle,
