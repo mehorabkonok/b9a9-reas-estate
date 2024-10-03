@@ -26,8 +26,6 @@ Main Requirements:
 Key Rules:
 ● Add live site URL.
 
-    Additional Information:
-
     ● Deploy your website on Firebase.
     You need To Submit:
 
