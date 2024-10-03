@@ -2,6 +2,8 @@
 
 # Live URL :
 
+# Github repo : https://github.com/mehorabkonok/b9a9-reas-estate
+
 # 5 Features of the website:
 
 - It has implemented sky blue color similar to the content image colors.
@@ -32,5 +34,5 @@ is mandatory to implement)
 
     ● Deploy your website on Firebase.
     You need To Submit:
-    ● Your GitHub repository
+
     ● Your Live site link

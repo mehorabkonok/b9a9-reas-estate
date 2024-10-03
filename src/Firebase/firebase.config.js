@@ -5,13 +5,23 @@ import { getAuth } from "firebase/auth";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+// const firebaseConfig = {
+//   apiKey: "AIzaSyDpnY4aW1J1rXIZXZ4EXtjD7yWJCDjNv3k",
+//   authDomain: "react-practice-app-6.firebaseapp.com",
+//   projectId: "react-practice-app-6",
+//   storageBucket: "react-practice-app-6.appspot.com",
+//   messagingSenderId: "269121110220",
+//   appId: "1:269121110220:web:3fb9060d448bf492294269",
+// };
+
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDpnY4aW1J1rXIZXZ4EXtjD7yWJCDjNv3k",
-  authDomain: "react-practice-app-6.firebaseapp.com",
-  projectId: "react-practice-app-6",
-  storageBucket: "react-practice-app-6.appspot.com",
-  messagingSenderId: "269121110220",
-  appId: "1:269121110220:web:3fb9060d448bf492294269",
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase
