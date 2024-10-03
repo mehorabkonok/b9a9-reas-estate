@@ -1,6 +1,6 @@
 # Website Name: 'RE Real Estate'.
 
-# Live URL :
+# Live URL : https://react-practice-app-6.web.app
 
 # Github repo : https://github.com/mehorabkonok/b9a9-reas-estate
 
@@ -21,12 +21,3 @@
 # Is the website responsible ?
 
 -yes. For mobile, tablet , laptop and more.
-
-Main Requirements:
-Key Rules:
-● Add live site URL.
-
-    ● Deploy your website on Firebase.
-    You need To Submit:
-
-    ● Your Live site link
