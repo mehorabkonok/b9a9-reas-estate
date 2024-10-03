@@ -26,10 +26,6 @@ Main Requirements:
 Key Rules:
 ● Add live site URL.
 
-● Use environment variables for Firebase config keys. (In the Assignment
-video you will see this point is on additional information but remember it
-is mandatory to implement)
-
     Additional Information:
 
     ● Deploy your website on Firebase.
